@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class PlayerButtons : MonoBehaviour
 {
+    [Header("Interactable Buttons")]
     public Button rockButton;
     public Button paperButton;
     public Button scissorButton;
-    public GameObject gameManager;
+
+    private GameObject gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -22,25 +24,25 @@ public class PlayerButtons : MonoBehaviour
         gameManager = GameObject.Find("GameManager"); 
 
         //If something went wrong the following error code will run.
-        if (gameManager != null)
+        if (gameManager == null)
         {
             Debug.Log("The Game Manager was not properly stored! Check if the string corresponds with the name of the Game Object in the editor's hierarchy");
         }
     }
 
-    // Update is called once per frame
+    //Below are functions for each option.
     private void ChooseRock()
     {
-        //Communicate with the Game Manager
+        //Communicate with the Game Manager using Unity's GetComponent function.
     }
 
     private void ChoosePaper()
     {
-
+        //Communicate with the Game Manager
     }
 
     private void ChooseScissor()
     {
-
+        //Communicate with the Game Manager
     }
 }
