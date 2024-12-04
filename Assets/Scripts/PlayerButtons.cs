@@ -33,16 +33,20 @@ public class PlayerButtons : MonoBehaviour
     //Below are functions for each option.
     private void ChooseRock()
     {
+
         //Communicate with the Game Manager using Unity's GetComponent function.
+        gameManager.GetComponent<GameScript>().GamePlay(0);
     }
 
     private void ChoosePaper()
     {
         //Communicate with the Game Manager
+        gameManager.GetComponent<GameScript>().GamePlay(1);
     }
 
     private void ChooseScissor()
     {
         //Communicate with the Game Manager
+        gameManager.GetComponent<GameScript>().GamePlay(2);
     }
 }
